@@ -17,9 +17,9 @@ const App = () => {
 
   return (
     <>
-      <AllPoetry />
-      <NavBar />
-      <Poetry data={data[5]} />
+      <AllPoetry data={data} />
+      {/* <NavBar />
+      <Poetry data={data[5]} /> */}
     </>
   );
 };
