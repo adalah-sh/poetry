@@ -19,7 +19,7 @@ const App = () => {
     <>
       <NavBar />
       {!one && <AllPoetry setOne={setOne} data={data} />}
-      {one && <Poetry data={data[one]} />}
+      {one && <Poetry setOne={setOne} data={data[one]} />}
     </>
   );
 };
