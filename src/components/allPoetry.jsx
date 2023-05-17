@@ -2,6 +2,8 @@ import axios from 'axios';
 import { Component } from "react";
 import { createServer } from "miragejs";
 import { data } from "../data";
+import Card from './poteryCard';
+
 let server = createServer();
 server.get("/azouha", data);
 
@@ -26,16 +28,16 @@ export default class AllPoetry extends Component {
         return (
             <>
                 {data?.users.map((user) => (
-                    <li key={user.id}>
-                        <h2>{user.title}</h2>
-                        {user.poetry.split("@").map((e, i) => (
-                            <p key={i}>{e}</p>
-                        ))}
-                        <br />
-                        <br />
-                    </li>
+                    <Card />
+                    // <li key={user.id}>
+                    //     <h2>{user.title}</h2>
+                    //     {user.poetry.split("@").map((e, i) => (
+                    //         <p key={i}>{e}</p>
+                    //     ))}
+                    //     <br />
+                    //     <br />
+                    // </li>
                 ))}
-                {data && <h1>Loading...</h1>}
             </>
         );
     }

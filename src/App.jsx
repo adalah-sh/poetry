@@ -1,13 +1,14 @@
 import './App.css'
 import AllPoetry from './components/allPoetry';
+import Card from './components/poteryCard'
 import  NavBar  from './components/navbar';
 
 const App = () => {
 
   return (
     <>
-      <NavBar />
-      {/* <AllPoetry /> */}
+      {/* <Card /> */}
+      <AllPoetry />
     </>
   );
 };
