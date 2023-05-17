@@ -4,6 +4,7 @@ export default class Poetry extends Component {
   constructor(props) {
     super(props);
   }
+  
   render() {
     const { data } = this.props;
     return (

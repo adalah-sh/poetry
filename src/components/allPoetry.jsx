@@ -6,12 +6,12 @@ export default class AllPoetry extends Component {
     super(props);
   }
   render() {
-    const { data } = this.props;
+    const { data, setOne } = this.props;
     return (
       <>
         {data &&
           data.map((item, index) => {
-            return <Card key={index} data={item} />;
+            return <button key={index} onClick={()=> {setOne(index)}}> <Card  data={item} /></button>;
           })}
       </>
     );
