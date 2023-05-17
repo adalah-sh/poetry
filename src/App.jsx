@@ -1,5 +1,6 @@
 import './App.css'
-// import AllPoetry from './components/allPoetry';
+import AllPoetry from './components/allPoetry';
+import Card from './components/poteryCard'
 import  NavBar  from './components/navbar';
 import Poetry from './components/poetry';
 import { fetch } from './fetch';
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <>
+      <AllPoetry />
       <NavBar />
       <Poetry data={data[5]} />
     </>
