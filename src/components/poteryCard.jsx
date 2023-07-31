@@ -2,10 +2,6 @@ import { Component } from "react";
 
 export default class Card extends Component{
 
-    // constructor(props){
-    //     const obj = this.props.data
-    //     super(props)
-    // }
     render(){
         const { data } = this.props;
         console.log(data);

@@ -6,20 +6,28 @@ export default class Poetry extends Component {
   }
 
   render() {
-    const { data , setOne} = this.props;
+    const { data, setOne } = this.props;
     return (
-      <div>
-        <button onClick={() => setOne(false)}>close</button>
-        {data &&
-          <div>
-            <h2>{data.title}</h2>
-            <h3>{data.epoch}</h3>
-            <h3>{data.poet}</h3>
-            <h3>{data.category}</h3>
-            <h3>{data.number_of_ines}</h3>
-            <h3>{data.poetry}</h3>
-          </div>}
-
+      <div className="show-poetry">
+        {data && (
+          <div className="poetry">
+            <div>
+              <h2>{data.title}</h2>
+              <h3>{data.epoch}</h3>
+              <h3>{data.poet}</h3>
+              <h3>{data.category}</h3>
+              <h3>{data.number_of_ines}</h3>
+              <button onClick={() => setOne(false)}>close</button>
+            </div>
+            <div>
+              <h3>
+                {data.poetry.split("@").map((e) => (
+                  <p>{e}</p>
+                ))}
+              </h3>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

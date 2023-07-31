@@ -8,12 +8,22 @@ export default class AllPoetry extends Component {
   render() {
     const { data, setOne } = this.props;
     return (
-      <>
+      <div className="poetrys">
         {data &&
           data.map((item, index) => {
-            return <button key={index} onClick={()=> {setOne(index)}}> <Card  data={item} /></button>;
+            return (
+              <button
+                key={index}
+                onClick={() => {
+                  setOne(index);
+                }}
+              >
+                {" "}
+                <Card data={item} />
+              </button>
+            );
           })}
-      </>
+      </div>
     );
   }
 }
